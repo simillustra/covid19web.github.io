@@ -2,7 +2,8 @@
 $(document).ready(function() {
     $('#covid-19-form').on('submit', function(e) {
 		e.preventDefault();
-        $('#covid-19-form').reset();
+       $("#covid-19-form").find('input:text, input:password, input:file, select, textarea').val('');
+    $("#covid-19-form").find('input:radio, input:checkbox').removeAttr('checked').removeAttr('selected');
         
 //		$('#msgButton').attr('disabled', '');
 //		$(".output").html('<div><i class="fa fa-spinner fa-spin fa-2x"></i> Processing...</div>');
