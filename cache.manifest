@@ -5,13 +5,13 @@ CACHE MANIFEST
 CACHE:
 /favicon.ico
 index.html
-/assets/css/bootstrap.min.css
+/assets/bootstrap/css/bootstrap.min.css
 /assets/img/01.jpg
 /assets/img/02.jpg
 /assets/img/03.jpg
 /assets/img/04.jpg
 /assets/img/covid-19.jpg
-/assets/bootstrap/bootstrap.min.js
+/assets/bootstrap/js/bootstrap.min.js
 /assets/js/jquery.min.js
 /assets/js/lazysizes.min.js
 
