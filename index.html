@@ -1,169 +1,351 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Home - Covid-19 Estimator</title>
+    <meta
+      name="description"
+      content="Estimate how fast covid 19 is spreading  within your area, and take preventive measures"
+    />
+    <meta property="og:image" content="/assets/img/01.jpg" />
+    <meta property="og:type" content="website" />
+    <meta
+      name="twitter:description"
+      content="Estimate how fast covid 19 is spreading  within your area, and take preventive measures"
+    />
+    <meta name="twitter:image" content="/assets/img/01.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="How is Covid-19 spreading and what to do."
+    />
+    <meta
+      property="og:title"
+      content="How is Covid-19 spreading and what to do."
+    />
+    <meta
+      property="og:description"
+      content="Estimate how fast covid 19 is spreading  within your area, and take preventive measures"
+    />
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+    />
+  </head>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <title>Home - Covid-19 Estimator</title>
-        <meta name="description" content="Estimate how fast covid 19 is spreading  within your area, and take preventive measures">
-        <meta property="og:image" content="/assets/img/01.jpg">
-        <meta property="og:type" content="website">
-        <meta name="twitter:description" content="Estimate how fast covid 19 is spreading  within your area, and take preventive measures">
-        <meta name="twitter:image" content="/assets/img/01.jpg">
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="How is Covid-19 spreading and what to do.">
-        <meta property="og:title" content="How is Covid-19 spreading and what to do.">
-        <meta property="og:description" content="Estimate how fast covid 19 is spreading  within your area, and take preventive measures">
-        <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
-    </head>
-
-    <body>
-        <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">
-            <div class="container"><a class="navbar-brand" href="#">Codvid-19 Estimator</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">FAQs</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Contact Us</a></li>
-                    </ul>
+  <body>
+    <nav
+      class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#">Codvid-19 Estimator</a
+        ><button
+          data-toggle="collapse"
+          class="navbar-toggler"
+          data-target="#navbarResponsive"
+          aria-label="toggles menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" href="#">FAQs</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header class="masthead text-center text-white">
+      <div class="masthead-content">
+        <div class="container">
+          <h1 class="masthead-heading mb-0">Putting You First</h1>
+          <h2 class="masthead-subheading mb-0">Inspite of COVID-19 Pandemic</h2>
+          <a
+            class="btn btn-primary btn-xl rounded-pill mt-5"
+            role="button"
+            href="#"
+            aria-label="Learn More!"
+            >Learn More</a
+          >
+        </div>
+      </div>
+      <div class="bg-circle-1 bg-circle"></div>
+      <div class="bg-circle-2 bg-circle"></div>
+      <div class="bg-circle-3 bg-circle"></div>
+      <div class="bg-circle-4 bg-circle"></div>
+    </header>
+    <section>
+      <div class="container">
+        <h2 class="display-4 text-center">Covid-19 Estimator</h2>
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img
+                class="img-fluid"
+                src="/assets/img/01.jpg"
+                alt="What you need to know about covid-19"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <form id="covid-19-form">
+                <div class="form-group">
+                  <label
+                    for="population"
+                    class="col-form-label col-form-label-sm"
+                    >Region Population:</label
+                  >
+                  <input
+                    class="form-control form-control-sm"
+                    type="number"
+                    min="1"
+                    step="1"
+                    id="population"
+                    aria-describedby="populationHelp"
+                    placeholder="Enter Region Population"
+                    data-population
+                  />
+                  <small id="populationHelp" class="form-text text-muted"
+                    >Use to calculate infection spread and counter
+                    measures</small
+                  >
                 </div>
-            </div>
-        </nav>
-        <header class="masthead text-center text-white">
-            <div class="masthead-content">
-                <div class="container">
-                    <h1 class="masthead-heading mb-0">Putting You First</h1>
-                    <h2 class="masthead-subheading mb-0">Inspite of COVID-19 Pandemic</h2><a class="btn btn-primary btn-xl rounded-pill mt-5" role="button" href="#">Learn More</a></div>
-            </div>
-            <div class="bg-circle-1 bg-circle"></div>
-            <div class="bg-circle-2 bg-circle"></div>
-            <div class="bg-circle-3 bg-circle"></div>
-            <div class="bg-circle-4 bg-circle"></div>
-        </header>
-        <section>
-            <div class="container">
-                 <h2 class="display-4 text-center">Covid-19 Estimator</h2>
-                <div class="row align-items-center">                   
-                    <div class="col-lg-6 order-lg-2">
-                        <div class="p-5"><img class="img-fluid" src="/assets/img/01.jpg" alt="What you need to know about covid-19"></div>
-                    </div>
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="p-5">                          
-                            <form id="covid-19-form">
-                                <div class="form-group">
-                                    <label for="population" class="col-form-label col-form-label-sm">Region Population:</label>
-                                    <input class="form-control form-control-sm" type="number" min="1" step="1" id="population" aria-describedby="populationHelp" placeholder="Enter Region Population" data-population>
-                                    <small id="populationHelp" class="form-text text-muted">Use to calculate infection spread and counter measures</small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="timeToElapse" class="col-form-label col-form-label-sm">Time Range:</label>
-                                        <input class="form-control form-control-sm" type="number" min="1" step="1" id="timeToElapse" aria-describedby="timeToElapseHelp" placeholder="Enter time range" data-time-to-elapse>
-                                    <small id="timeToElapseHelp" class="form-text text-muted">Time range helps you plans to provide the best health care approach with  an area.</small>
-                                </div>
-                                <div class="form-group">
-                                <label for="reportedCases" class="col-form-label col-form-label-sm">Reported Cases:</label>
-                                    <input class="form-control form-control-sm" type="number" min="1" step="1" id="reportedCases" aria-describedby="reportedCasesHelp" placeholder="Enter reported cases" data-reported-cases="reportedCases">
-                                <small id="reportedCasesHelp" class="form-text text-muted">Help you calculte the spread and take preventive measures.</small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="totalHospitalBeds" class="col-form-label col-form-label-sm">Total Hospital Beds:</label>
-                                    <input class="form-control form-control-sm" type="number" min="1" step="1" id="totalHospitalBeds" aria-describedby="totalHospitalBedsHelp" placeholder="Enter total hospital beds" data-total-hospital-beds>
-                                    <small id="totalHospitalBedsHelp" class="form-text text-muted">Number of hospital beds help you plan for severe cases.</small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="periodType" class="col-form-label col-form-label-sm">Period Type:</label>
-                                        <select class="custom-select form-control form-control-sm" id="periodType" data-period-type="periodType">
-                                            <optgroup label="Select Period Type">
-                                                <option value="days" selected="">DAYS</option>
-                                                <option value="weeks">WEEKS</option>
-                                                <option value="months">MONTHS</option>
-                                            </optgroup>
-                                        </select>
-                                    <small id="periodTypeHelp" class="form-text text-muted">Periods help you get specific results.</small>
-                                </div>
-                                <div class="align-items-center">
-                                    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#estimateModalCenter" data-go-estimate>Estimate Now!</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+                <div class="form-group">
+                  <label
+                    for="timeToElapse"
+                    class="col-form-label col-form-label-sm"
+                    >Time Range:</label
+                  >
+                  <input
+                    class="form-control form-control-sm"
+                    type="number"
+                    min="1"
+                    step="1"
+                    id="timeToElapse"
+                    aria-describedby="timeToElapseHelp"
+                    placeholder="Enter time range"
+                    data-time-to-elapse
+                  />
+                  <small id="timeToElapseHelp" class="form-text text-muted"
+                    >Time range helps you plans to provide the best health care
+                    approach with an area.</small
+                  >
                 </div>
-            </div>
-        </section>
-        <section>
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="p-5"><img class="rounded-circle img-fluid" src="/assets/img/02.jpg" alt="Washing your hands"></div>
-                    </div>
-                    <div class="col-lg-6 order-lg-2">
-                        <div class="p-5">
-                            <h2 class="display-4">Washing your Hands!</h2>
-                            <p>Washing your hands regularly, with soap and running waster or use hand sanitizers.</p>
-                        </div>
-                    </div>
+                <div class="form-group">
+                  <label
+                    for="reportedCases"
+                    class="col-form-label col-form-label-sm"
+                    >Reported Cases:</label
+                  >
+                  <input
+                    class="form-control form-control-sm"
+                    type="number"
+                    min="1"
+                    step="1"
+                    id="reportedCases"
+                    aria-describedby="reportedCasesHelp"
+                    placeholder="Enter reported cases"
+                    data-reported-cases="reportedCases"
+                  />
+                  <small id="reportedCasesHelp" class="form-text text-muted"
+                    >Help you calculte the spread and take preventive
+                    measures.</small
+                  >
                 </div>
-            </div>
-        </section>
-        <section>
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 order-lg-2">
-                        <div class="p-5"><img class="rounded-circle img-fluid" src="/assets/img/03.jpg" alt="Social distancing"></div>
-                    </div>
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="p-5">
-                            <h3 class="display-4">Social distance!</h3>
-                            <p>Avoid crowded places, give 2 meter distance from strangers.</p>
-                        </div>
-                    </div>
+                <div class="form-group">
+                  <label
+                    for="totalHospitalBeds"
+                    class="col-form-label col-form-label-sm"
+                    >Total Hospital Beds:</label
+                  >
+                  <input
+                    class="form-control form-control-sm"
+                    type="number"
+                    min="1"
+                    step="1"
+                    id="totalHospitalBeds"
+                    aria-describedby="totalHospitalBedsHelp"
+                    placeholder="Enter total hospital beds"
+                    data-total-hospital-beds
+                  />
+                  <small id="totalHospitalBedsHelp" class="form-text text-muted"
+                    >Number of hospital beds help you plan for severe
+                    cases.</small
+                  >
                 </div>
-            </div>
-        </section>
-             <section>
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="p-5"><img class="rounded-circle img-fluid" src="/assets/img/04.jpg" alt="healthy meals and excersice"></div>
-                    </div>
-                    <div class="col-lg-6 order-lg-2">
-                        <div class="p-5">
-                            <h3 class="display-4">Good Hygiene!</h3>
-                            <p>Keeping your enviroment clean, eating healthy foods with daily excercise.</p>
-                        </div>
-                    </div>
+                <div class="form-group">
+                  <label
+                    for="periodType"
+                    class="col-form-label col-form-label-sm"
+                    >Period Type:</label
+                  >
+                  <select
+                    class="custom-select form-control form-control-sm"
+                    id="periodType"
+                    data-period-type="periodType"
+                  >
+                    <optgroup label="Select Period Type">
+                      <option value="days" selected="">DAYS</option>
+                      <option value="weeks">WEEKS</option>
+                      <option value="months">MONTHS</option>
+                    </optgroup>
+                  </select>
+                  <small id="periodTypeHelp" class="form-text text-muted"
+                    >Periods help you get specific results.</small
+                  >
                 </div>
-            </div>
-        </section>
-        <footer class="py-5 bg-black">
-            <div class="container">
-                <p class="text-center text-white m-0 small">Copyright&nbsp;© CodeChallage 2020</p>
-            </div>
-        </footer>
-            <!-- Modal -->
-            <div class="modal fade" id="estimateModalCenter" tabindex="-1" role="dialog" aria-labelledby="estimateModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Covid-19 Spread Estimate</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                  <div class="p-5"><img class="img-fluid" src="/assets/img/covid-19.png"></div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Email this Info!</button>
-                  </div>
+                <div class="align-items-center">
+                  <button
+                    class="btn btn-primary btn-lg"
+                    data-toggle="modal"
+                    data-target="#estimateModalCenter"
+                    data-go-estimate
+                  >
+                    Estimate Now!
+                  </button>
                 </div>
-              </div>
+              </form>
             </div>
-        <script src="/assets/js/jquery.min.js"></script>
-        <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets/js/app.custom.js"></script>
-    </body>
-
-    </html>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <img
+                class="rounded-circle img-fluid"
+                src="/assets/img/02.jpg"
+                alt="Washing your hands"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <h2 class="display-4">Washing your Hands!</h2>
+              <p>
+                Washing your hands regularly, with soap and running waster or
+                use hand sanitizers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img
+                class="rounded-circle img-fluid"
+                src="/assets/img/03.jpg"
+                alt="Social distancing"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h3 class="display-4">Social distance!</h3>
+              <p>Avoid crowded places, give 2 meter distance from strangers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <img
+                class="rounded-circle img-fluid"
+                src="/assets/img/04.jpg"
+                alt="healthy meals and excersice"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <h3 class="display-4">Good Hygiene!</h3>
+              <p>
+                Keeping your enviroment clean, eating healthy foods with daily
+                excercise.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="py-5 bg-black">
+      <div class="container">
+        <p class="text-center text-white m-0 small">
+          Copyright&nbsp;© CodeChallage 2020
+        </p>
+      </div>
+    </footer>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="estimateModalCenter"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="estimateModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">
+              Covid-19 Spread Estimate
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="p-5">
+              <img class="img-fluid" src="/assets/img/covid-19.png" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">
+              Email this Info!
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/app.custom.js"></script>
+  </body>
+</html>
