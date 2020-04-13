@@ -1,0 +1,27 @@
+{
+  "name": "covid-19-frontend-assesment",
+  "version": "1.0.0",
+  "description": "covid-19 facebook andela frontend challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "purgecss --css bootstrap.min.css --content index.html --output assets/bootstrap/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simillustra/covid19web.github.io.git"
+  },
+  "keywords": [
+    "covid-19",
+    "estimator"
+  ],
+  "author": "S.A.V.I.O.U.R",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simillustra/covid19web.github.io/issues"
+  },
+  "homepage": "https://github.com/simillustra/covid19web.github.io#readme",
+  "devDependencies": {
+    "purgecss": "^2.1.2"
+  }
+}
