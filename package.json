@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/simillustra/covid19web.github.io#readme",
   "devDependencies": {
-    "purgecss": "^2.1.2"
+    "purgecss": "^5.0.0"
   }
 }
